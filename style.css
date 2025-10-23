@@ -1,0 +1,110 @@
+:root {
+  --bg: #ef9adc;
+  --card: #ffffff;
+  --accent1: #f3d6ff;
+  --accent2: #d6e9ff;
+  --text: #333;
+  --radius: 18px;
+  --shadow: 0 8px 16px rgba(0,0,0,0.07);
+}
+
+body.dark {
+  --bg: #1e1e2e;
+  --card: #2a2a3c;
+  --accent1: #705cff;
+  --accent2: #9b67ff;
+  --text: #f4f4f4;
+  --shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  transition: background 0.4s, color 0.3s;
+}
+
+.site-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(120deg, var(--accent1), var(--accent2));
+  border-bottom: 2px solid #eee;
+  position: relative;
+}
+
+.site-header h1 { font-size: 2.2rem; margin-bottom: .4rem; }
+.tagline { font-style: italic; opacity: 0.85; }
+
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+.theme-toggle:hover { transform: scale(1.2); }
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-area {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#searchBox {
+  width: 80%;
+  max-width: 400px;
+  padding: .8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: var(--radius);
+  outline: none;
+  box-shadow: var(--shadow);
+}
+#searchBox:focus {
+  border-color: #a666ff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 0 0 160px;
+  background: var(--card);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+
+
+
